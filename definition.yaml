@@ -1,0 +1,13 @@
+---
+
+Comment: A Hello World example of the Amazon States Language using an AWS Lambda Function
+StartAt: HelloStart
+States:
+  HelloStart:
+    Type: Pass
+    Comment: this is HelloWorld
+    Next: HelloEnd
+  HelloEnd:
+    Type: Task
+    Resource: ${lambda_arn}
+    End: true
